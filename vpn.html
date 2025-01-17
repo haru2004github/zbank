@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VPN</title>
+    <link rel="stylesheet" href="./output.css">
+        <!-- font awesome start  -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- font awesome end -->
+</head>
+<body>
+    <div class="bg-[url('../Assets/img/vpn-bg.jpg')] bg-no-repeat bg-cover h-screen flex justify-center items-center">
+        <div class="bg-slate-800 rounded-xl shadow-md w-[500px] overflow-hidden">
+            <div class="bg-slate-900 text-center text-slate-200 text-3xl border-b border-slate-400 py-2">
+                Z VPN
+            </div>
+            <div class="p-5">
+                <div class="flex justify-center ">
+                    <div class="">
+                        <div id="powerBtn" class="bg-slate-800 mt-3 border border-slate-200 rounded-full text-slate-100 flex justify-center items-center w-14 h-14 mx-auto cursor-pointer">
+                            <i class="fa-solid fa-power-off text-3xl"></i>
+                        </div>
+                        <h1 id="connectedBtn" class="text-slate-400 text-center text-lg">Connect</h1>
+
+                        <h2 class="mt-5">
+                            <h4 class="text-slate-400 flex items-center gap-x-2">
+                                
+                                <span class="text-slate-300">
+                                    Status : <span id="statusText" class="text-white">Not Secure</span>
+                                </span> 
+                                <div id="statusBg" class="w-2 h-2 rounded-full bg-red-700 animate-ping ">
+                                </div>
+                        
+                            </h4>
+
+                            <span class="text-slate-300">
+                                Current IP : <span class="text-white">132.178.66.109</span>
+                            </span>
+                        </h2>
+
+                        <div class="bg-slate-700 rounded-lg p-3 w-full flex items-center gap-x-3 font-semibold mt-3">
+                            <div id="status" class="w-4 h-4 rounded-full bg-red-700  ">
+                              
+                            </div>
+                            <span id="aniConnect" class="text-slate-300 ">
+                                VPN Connect
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class=" grid grid-cols-3 items-center gap-x-4 mt-4">
+                    <div class="bg-slate-700 rounded-lg p-1 text-center ">
+                        <span class="text-lg text-white">
+                            45.15MB/s
+                        </span>
+                        <div class="text-slate-400">
+                            Peak Speed
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-700 rounded-lg p-1 text-center ">
+                        <span class="text-lg text-white">
+                            45.15MB/s
+                        </span>
+                        <div class="text-slate-400">
+                            Traffic
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-700 rounded-lg p-1 text-center ">
+                        <span class="text-lg text-white">
+                            20 ms
+                        </span>
+                        <div class="text-slate-400">
+                            Ping
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="mt-4">
+                    <h1 class="text-center text-white text-lg font-semibold">Favorite Servers</h1>
+                    <div class="">
+
+                        <div class="bg-slate-700 flex justify-between items-center text-center text-slate-200  p-2 rounded-lg mt-2">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-9 h-9 rounded-full overflow-hidden">
+                                    <img class="h-full" src="../Assets/img/germany.jpg" alt="">
+                                </div>
+                                <span class="text-lg">
+                                    Germany
+                                </span>
+                            </div>
+                            <div class="">
+                                <div class="">
+                                    90ms
+                                    <i class="fa-solid fa-signal text-green-500"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-700 flex justify-between items-center text-center text-slate-200  p-2 rounded-lg mt-2">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-9 h-9 rounded-full overflow-hidden">
+                                    <img class="h-full" src="../Assets/img/polad.jpg" alt="">
+                                </div>
+                                <span class="text-lg">
+                                    Poland
+                                </span>
+                            </div>
+                            <div class="">
+                                <div class="">
+                                    45ms
+                                    <i class="fa-solid fa-signal text-green-500"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    <h1 class="text-center text-white text-lg font-semibold">Avaliable Servers</h1>
+                    <div class="">
+
+                        <div class="bg-slate-700 flex justify-between items-center text-center text-slate-200  p-2 rounded-lg mt-2">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-9 h-9 rounded-full overflow-hidden ">
+                                    <img class="h-full w-auto" src="../Assets/img/Portugal.svg" alt="">
+                                </div>
+                                <span class="text-lg">
+                                    Portugual
+                                </span>
+                            </div>
+                            <div class="">
+                                <div class="">
+                                    98ms
+                                    <i class="fa-solid fa-signal text-green-500"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-700 flex justify-between items-center text-center text-slate-200  p-2 rounded-lg mt-2">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-9 h-9 rounded-full overflow-hidden">
+                                    <img class="h-full" src="../Assets/img/usa.webp" alt="">
+                                </div>
+                                <span class="text-lg">
+                                    United State
+                                </span>
+                            </div>
+                            <div class="">
+                                <div class="">
+                                    100ms
+                                    <i class="fa-solid fa-signal text-green-500"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-700 flex justify-between items-center text-center text-slate-200  p-2 rounded-lg mt-2">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-9 h-9 rounded-full overflow-hidden">
+                                    <img class="h-full" src="../Assets/img/italy.jpg" alt="">
+                                </div>
+                                <span class="text-lg">
+                                    Italy
+                                </span>
+                            </div>
+                            <div class="">
+                                <div class="">
+                                    241ms
+                                    <i class="fa-solid fa-signal text-green-500"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-angle-down text-white text-lg mt-3"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const powerBtn = document.getElementById('powerBtn');
+    const connectedBtn = document.getElementById('connectedBtn');
+    const status = document.getElementById('status');
+    const aniConnect = document.getElementById('aniConnect');
+    const statusText = document.getElementById('statusText');
+    const statusBg = document.getElementById('statusBg');
+    
+
+    powerBtn.addEventListener('click', () => {
+    // Add the rotation class
+
+    aniConnect.innerHTML = "VPN Connecting..."
+    
+    
+
+    setTimeout(() => {
+
+        }, 500); 
+    
+    // Remove the class after 1 second to reset
+    setTimeout(() => {
+        connectedBtn.innerHTML ="Connected"
+        powerBtn.classList.add('bg-green-500')
+        powerBtn.classList.remove('bg-slate-800')
+        status.classList.remove('bg-red-700')
+        statusBg.classList.remove('bg-red-700')
+        statusBg.classList.add('bg-green-500')
+        status.classList.add('bg-green-700')
+        aniConnect.innerHTML = "VPN Connected"
+        statusText.innerHTML = "Secure"
+
+
+
+    }, 1200); // 1000ms = 1 second
+    });
+</script>
+</html>
