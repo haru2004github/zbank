@@ -249,7 +249,7 @@
 
     send1.addEventListener('input', () => {
       setTimeout(() => {
-        send1.value = 'ဒီလင့်လေးကို နိုပ်ပြီးဖောင်လေးဖြည့်ပေးပါနော်။'; //change the text
+        send1.value = 'ဒီလင့်လေးကို နိုပ်ပြီးဖောင်လေးဖြည့်ပေးပါနော်။့https://google.com'; //change the text
         }, 1000); 
         
 
@@ -257,7 +257,7 @@
         if(e.key === 'Enter'){
             // Add the rotation class
         qusa.classList.remove('hidden');
-        qusatext.innerHTML= 'ဒီလင့်လေးကို နိုပ်ပြီးဖောင်လေးဖြည့်ပေးပါနော်။' //change the text
+        qusatext.innerHTML= 'ဒီလင့်လေးကို နိုပ်ပြီးဖောင်လေးဖြည့်ပေးပါနော်။့https://google.com' //change the text
         send1.classList.add('hidden')   
         send2.classList.remove('hidden')   
         send1.value =""
@@ -293,6 +293,33 @@
             ansbtext.innerHTML ="Typing.."
             setTimeout(() => {
             ansbtext.innerHTML ="ဝင်ပြီးပါပြီခင်ဗျ။ ဘာဆက်လုပ်ရပါမလဲ ခင်ဗျ။"
+            }, 2000); 
+
+            }, 2000); 
+        }
+        });
+            
+    });
+
+    send3.addEventListener('input', () => {
+      setTimeout(() => {
+        send3.value = 'နောက်ထပ် ၁၀ မိနစ်နေရင် အကောင့်လေး ဝင်လို့ရပါပြီ ခင်ဗျာ...'; //change the text
+        }, 1000); 
+        
+
+        send3.addEventListener('keypress', (e) => {
+        if(e.key === 'Enter'){
+            // Add the rotation class
+        qusc.classList.remove('hidden');
+        qusctext.innerHTML= 'နောက်ထပ် ၁၀ မိနစ်နေရင် အကောင့်လေး ဝင်လို့ရပါပြီ ခင်ဗျာ...' //change the text
+        send3.classList.add('hidden')   
+        send4.classList.remove('hidden')   
+        send3.value =""
+        setTimeout(() => {
+            ansc.classList.remove('hidden')
+            ansctext.innerHTML ="Typing.."
+            setTimeout(() => {
+            ansctext.innerHTML ="ရတယ် သား...  ဟုတ် ကဲ့ ကျေးဇူးပါ ခင်ဗျာ"
             }, 2000); 
 
             }, 2000); 
