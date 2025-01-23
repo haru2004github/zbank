@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <style>
        /* HTML: <div class="loader"></div> */
 .loader {
   width: 20px;
   aspect-ratio: 1;
   border-radius: 50%;
-  background: #27a015;
-  box-shadow: 0 0 0 0 rgba(32, 169, 45, 0.267);
+  background: #2b0d98;
+  box-shadow: 0 0 0 0 rgba(151, 13, 47, 0.267);
   animation: l2 1.5s infinite linear;
   position: relative;
 }
@@ -22,7 +24,7 @@
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  box-shadow: 0 0 0 0 rgba(24, 168, 58, 0.267);
+  box-shadow: 0 0 0 0 rgba(33, 13, 150, 0.267);
   animation: inherit;
   animation-delay: -0.5s;
 }
@@ -33,20 +35,50 @@
     100% {box-shadow: 0 0 0 40px #0000}
 }
 
+/* HTML: <div class="loader"></div> */
+.loader1 {
+  width: 60px;
+  height: 50px;
+  --m:no-repeat linear-gradient(90deg,#12bb3f 70%,#0fc72100 0);
+  -webkit-mask: 
+    var(--m) calc(0*100%/4) 100%/calc(100%/5) calc(1*100%/5),
+    var(--m) calc(1*100%/4) 100%/calc(100%/5) calc(2*100%/5),
+    var(--m) calc(2*100%/4) 100%/calc(100%/5) calc(3*100%/5),
+    var(--m) calc(3*100%/4) 100%/calc(100%/5) calc(4*100%/5),
+    var(--m) calc(4*100%/4) 100%/calc(100%/5) calc(5*100%/5);
+  background: linear-gradient(#ffffff 0 0) left/0% 100% no-repeat #44a716;
+  animation: l14 2s infinite steps(6);
+}
+@keyframes l14 {
+  100% {background-size: 120% 100%}
+}
+
+
+/* * HTML: <div class="loader"></div> */ 
+.loader2 {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 8px solid;
+  border-color: #ffffff #2eab2300;
+  animation: l1 1s infinite;
+}
+@keyframes l1 {to{transform: rotate(.5turn)}}
+
 
     </style>
 
 </head>
 <body>
     <div class="">
-        <div style="height:100vh;" class="w-[30%] h-screen  fixed top-0 left-0 ">
+        <div  class="md:w-[30%] md:h-screen w-full md:h-[100vh] fixed bottom-0 md:top-0 left-0 flex flex-col-reverse justify-center items-center md:block">
         <!-- <div class="bg-green-900/20 w-full h-screen fixed top-0 left-0 z-0"></div> -->
 
-            <div class="bg-green-500 p-5 rounded-xl shadow-xl backdrop-blur-lg mt-20  border-2 border-green-500 ml-10">
-                <h2 class="text-white text-2xl font-semibold">
+            <div class="bg-[#003366] w-full p-2 md:p-5 rounded-xl shadow-xl backdrop-blur-lg md:mt-20  border-2 border-blue-500 md:ml-10">
+                <h2 class="text-white text-lg md:text-2xl font-semibold">
                 Location Data:
                 </h2>
-                <div class="bg-green-600 text-xl p-3 rounded-lg mt-3 text-white  ">
+                <div class="bg-blue-90 text-normal md:text-xl p-3 rounded-lg mt-3 text-white  ">
                     <h1 class="">
                         IP Address: 103.103.173.0
                         </h1>
@@ -65,28 +97,70 @@
                 </div>
             </div>
 
-            <div class="bg-green-500 p-5 rounded-xl shadow-xl backdrop-blur-lg mt-5  border-2 border-green-500 ml-10 py-10">
-                <div class="mt-8 flex justify-center gap-x-3">
-                    <button class="bg-green-800/50 ring-green-700 shadow-md border border-green-600 backdrop-blur-lg text-white p-2 text-lg rounded-lg">
-                        Trace the Loaction
-                    </button>
-                    
-                    <button class="bg-green-800/50 ring-green-700 shadow-md border border-green-600 backdrop-blur-lg text-white p-2 text-lg rounded-lg">
-                        Mark Location
-                    </button>
-
-                    <button class="bg-green-800/50 ring-green-700 shadow-md border border-green-600 backdrop-blur-lg text-white p-2 text-lg rounded-lg">
-                        Calibrate GPS:
-                    </button>
+            <div class="flex justify-center items-center px-10 scale-75 md:scale-100">
+                <div class=" bg-[#003366] p-5 rounded-xl shadow-xl backdrop-blur-lg mt-5  border-2 border-blue-500 ml-10 py-5">
+                    <div class="grid grid-cols-3 items-end gap-x-3">
+                        <div class="">
+                            <div class="loader1 mx-auto w-28 h-14"></div>
+    
+                            <button class=" mt-5 bg-green-500/80 ring-green-700 shadow-md border border-green-600 backdrop-blur-lg text-white p-2 text-lg rounded-lg">
+                                Trace Loaction
+                            </button>
+                        </div>
+    
+                        <div class="flex flex-col items-center">
+                            <div class="w-20 h-20 bg-red-500 text-white flex justify-center items-center rounded-full">
+                                <i class="fas fa-location text-4xl "></i>
+                            </div>
+    
+                            <button class=" mt-5 bg-red-500/80 ring-green-700 shadow-md border border-red-600 backdrop-blur-lg text-white p-2 text-lg rounded-lg">
+                                Mark Location
+                            </button>
+                        </div>
+    
+                        <div class="flex flex-col items-center">
+                            <div class="loader2  w-20 h-20"></div>
+    
+                            <button class=" mt-5 bg-blue-800/50 ring-green-700 shadow-mdbackdrop-blur-lg  border border-blue-600  text-white p-2 text-lg rounded-lg">
+                                Calibrate GPS:
+                            </button>
+                        </div>
+                        
+                        
+    
+                        
+                    </div>
                 </div>
             </div>
 
-           
         </div>
 
-        <div class="loader bg-green-500 w-20 h-20 rounded-full scale-[1.3]  fixed top-40 right-96 z-50"></div>
+        <div class="loader bg-red-500 flex justify-center text-white text-3xl items-center w-20 h-20 md:w-24  md:h-24 rounded-full scale-[1.3]  fixed top-32 md:top-40 right-96 z-50">
+            <div class="flex flex-col items-center">
+                <i class="fas fa-location-dot text-xl md:text-3xl text-center"></i>
+                <div class="text-xs mt-1">
+                    ဟိန်းစံ
+                </div>
+            </div>
+        </div>
 
-        <div class="loader bg-green-500 w-20 h-20 rounded-full fixed top-[50%] right-[60%] z-50 scale-[1.3] opacity-90"></div>
+        <div class="loader bg-red-500 flex justify-center text-white text-3xl items-center w-20 h-20 md:w-24  md:h-24 rounded-full fixed top-[40%] md:top-[50%] right-[70%] md:right-[60%] z-50 scale-[1.3] opacity-90">
+            <div class="flex flex-col items-center">
+                <i class="fas fa-location-dot text-xl md:text-3xl text-center"></i>
+                <div class="text-xs mt-1">
+                    ကျော်တေဇ
+                </div>
+            </div>
+        </div>
+
+        <div class="loader bg-red-500 flex justify-center text-white  items-center w-20 h-20 md:w-24  md:h-24 rounded-full fixed bottom-[50%] md:bottom-[20%] right-[10%] z-50 scale-[1.3] opacity-90">
+            <div class="flex flex-col items-center">
+                <i class="fas fa-location-dot text-xl md:text-3xl text-center"></i>
+                <div class="text-xs mt-1">
+                    ယွန်းဝတီ
+                </div>
+            </div>
+        </div>
 
 
         <!-- <iframe class="bg-green-500 w-20 h-20 rounded-full fixed top-[50%] right-[60%] z-50 " src="https://lottie.host/embed/85509ae9-4788-4f4c-a632-e0aa1f9893fb/02q7hW4W7g.lottie"></iframe> -->
