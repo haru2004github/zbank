@@ -23,7 +23,7 @@
     <!-- component -->
 
 <div class=" bg-[url('../Assets/img/vpn-bg.jpg')] bg-no-repeat bg-cover h-screen flex justify-center items-center">
-    <div class="bg-[#f6f8fc] rounded-xl rounded-b-0 w-[550px] overflow-hidden">
+    <div class="bg-[#f6f8fc] rounded-xl rounded-b-0 w-[800px] overflow-hidden">
         <div class="">
             <h1 class="bg-violet-700 text-center  text-2xl font-semibold text-slate-100 ">
                 <div class="relative w-full text-center text-slate-200 text-3xl  py-3">
@@ -79,7 +79,7 @@
                         </div>
                     </div>
                     <div class="flex justify-end">
-                        <p id="qusatext" class=" bg-white  p-2 text-slate-700 rounded-2xl rounded-tr-none shadow-lg border border-slate-300  mr-12 w-auto inline-block">
+                        <p id="qusatext" class=" bg-white  p-2 text-slate-700 rounded-2xl rounded-tr-none shadow-lg border border-slate-300  mr-12 w-auto inline-block text-end">
                             Question A
                         </p>
                     </div>
@@ -198,6 +198,26 @@
                 </div>
             </div>
 
+            <div id="e" class="">
+                <div id="quse" class="hidden">
+                    <div class="flex items-center gap-x-2 justify-end">
+                        <div class="text-lg font-semibold">
+                            Luminarc
+                        </div>
+                        <div class="w-12 h-12 overflow-hidden rounded-full shadow-lg">
+                            <img src="https://static.vecteezy.com/system/resources/thumbnails/000/439/863/small/Basic_Ui__28186_29.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="flex justify-end">
+                        <p id="qusetext" class=" bg-white  p-2 text-slate-700 rounded-2xl rounded-tr-none shadow-lg border border-slate-300  ml-12 w-auto inline-block">
+                            Question E
+                        </p>
+                    </div>
+                </div>
+    
+
+            </div>
+
 
 
 
@@ -211,6 +231,7 @@
                     <input id="send2" class="hidden focus:outline-none w-full   bg-[#f6f8fc] text-slate-700 px-5 py-2 rounded-2xl shadow-lg border border-slate-300 " type="text" placeholder="White a message...">
                     <input id="send3" class="hidden focus:outline-none w-full   bg-[#f6f8fc] text-slate-700 px-5 py-2 rounded-2xl shadow-lg border border-slate-300 " type="text" placeholder="White a message...">
                     <input id="send4" class="hidden focus:outline-none w-full   bg-[#f6f8fc] text-slate-700 px-5 py-2 rounded-2xl shadow-lg border border-slate-300 " type="text" placeholder="White a message...">
+                    <input id="send5" class="hidden focus:outline-none w-full   bg-[#f6f8fc] text-slate-700 px-5 py-2 rounded-2xl shadow-lg border border-slate-300 " type="text" placeholder="White a message...">
                 </div>
                 <div class="flex items-center gap-x-2">
                     <button>
@@ -259,98 +280,324 @@
     const ansdtext = document.getElementById('ansdtext');
 
     send1.addEventListener('input', () => {
-      setTimeout(() => {
-        send1.value = 'ဒီလင့်လေးကို နိုပ်ပြီးဖောင်လေးဖြည့်ပေးပါနော်။့https://google.com'; //change the text
-        }, 1000); 
-        
 
-        send1.addEventListener('keypress', (e) => {
+    const textToTypeA = " bank acc ကို စစ်ဆေးပြီးပြီ"; // Text to be typed
+        let index = 0;
+
+        function typeWordByWord() {
+            if (index < textToTypeA.length) {
+                // Add the next character to the input value
+                send1.value += textToTypeA[index];
+                index++;
+
+                send1.scrollLeft = send1.scrollWidth;
+                // Schedule the next character to be typed
+                setTimeout(typeWordByWord, 150); // Adjust speed (in milliseconds)
+            }
+
+            let texta = send1.value
+
+            /////
+            send1.addEventListener('keypress', (e) => {
         if(e.key === 'Enter'){
             // Add the rotation class
         qusa.classList.remove('hidden');
-        qusatext.innerHTML= 'ဒီလင့်လေးကို နိုပ်ပြီးဖောင်လေးဖြည့်ပေးပါနော်။့https://google.com' //change the text
+        qusatext.innerText= texta
         send1.classList.add('hidden')   
         send2.classList.remove('hidden')   
         send1.value =""
+
         setTimeout(() => {
             ansa.classList.remove('hidden')
             ansatext.innerHTML ="Typing.."
             setTimeout(() => {
-            ansatext.innerHTML ="ဟုတ်ကဲ့ပါခင်ဗျ။"
-            }, 2000); 
+            ansatext.innerHTML ="ဟမ်.    "
+            }, 1000); 
 
-            }, 2000); 
+            }, 1000); 
         }
         });
-            
+        }
+
+        // Start the auto-typing effect
+        if(send1.value == "ငါမင်းရဲ့"){
+            typeWordByWord();
+
+        }
+        console.log(send1.value)
+
+        
     });
+
+/////////////////////////////////////
 
     send2.addEventListener('input', () => {
-      setTimeout(() => {
-        send2.value = 'နောက်ဆယ်မိနစ်ဆိုရင် အကောင့်လေး Login ဝင်လို့ရပါပြီနော်။'; //change the text
-        }, 1000); 
-        
 
+const textToTypeB = " ပြောထားတဲ့အတိုင်း USD 5000 ကို crypto.com ကို လွှဲပြီးပြီလား"; // Text to be typed
+    let index = 0;
+
+    function typeWordByWord() {
+        if (index < textToTypeB.length) {
+            // Add the next character to the input value
+            send2.value += textToTypeB[index];
+            index++;
+            send2.scrollLeft = send2.scrollWidth;
+
+            // Schedule the next character to be typed
+            setTimeout(typeWordByWord, 100); // Adjust speed (in milliseconds)
+        }
+
+        let textb = send2.value
+
+        /////
         send2.addEventListener('keypress', (e) => {
-        if(e.key === 'Enter'){
-            // Add the rotation class
-        qusb.classList.remove('hidden');
-        qusbtext.innerHTML= 'နောက်ဆယ်မိနစ်ဆိုရင် အကောင့်လေး Login ဝင်လို့ရပါပြီနော်။' //change the text
-        send2.classList.add('hidden')   
-        send3.classList.remove('hidden')   
-        send2.value =""
+    if(e.key === 'Enter'){
+        // Add the rotation class
+    qusb.classList.remove('hidden');
+    qusbtext.innerText= textb
+    send2.classList.add('hidden')   
+    send3.classList.remove('hidden')   
+    send2.value =""
+
+    setTimeout(() => {
+        ansb.classList.remove('hidden')
+        ansbtext.innerHTML ="Typing.."
         setTimeout(() => {
-            ansb.classList.remove('hidden')
-            ansbtext.innerHTML ="Typing.."
-            setTimeout(() => {
-            ansbtext.innerHTML ="ဝင်ပြီးပါပြီခင်ဗျ။ ဘာဆက်လုပ်ရပါမလဲ ခင်ဗျ။"
-            }, 2000); 
+        ansbtext.innerHTML ="ငါ့မှာ မရှိဘူးလိုပြောတယ်လေ"
+        }, 2000); 
 
-            }, 2000); 
-        }
-        });
-            
+        }, 2000); 
+    }
     });
+    }
 
-    send3.addEventListener('input', () => {
-      setTimeout(() => {
-        send3.value = 'နောက်ထပ် ၁၀ မိနစ်နေရင် အကောင့်လေး ဝင်လို့ရပါပြီ ခင်ဗျာ...'; //change the text
-        }, 1000); 
+    // Start the auto-typing effect
+    if(send2.value == "မနေ့က"){
+        typeWordByWord();
+
+    }
+    console.log(send1.value)
+
+    
+});
+
+///////////////////////
+send3.addEventListener('input', () => {
+
+const textToTypeC = "မင်းအပိုင်းလေ .... မင်းလိပ်စာကို ငါ သိတယ်နော်...(အမှတ် ၅၄၅ ၊ လှော်ကားလမ်း...)"; // Text to be typed
+    let index = 0;
+
+    function typeWordByWord() {
+        if (index < textToTypeC.length) {
+            // Add the next character to the input value
+            send3.value += textToTypeC[index];
+            index++;
+            send3.scrollLeft = send3.scrollWidth;
+
+            // Schedule the next character to be typed
+
+            setTimeout(typeWordByWord, 100); // Adjust speed (in milliseconds)
+        }
+
+        let textc = send3.value
+
+        /////
+        send3.addEventListener('keypress', (e) => {
+    if(e.key === 'Enter'){
+        // Add the rotation class
+    qusc.classList.remove('hidden');
+    qusctext.innerText= textc
+    send3.classList.add('hidden')   
+    send4.classList.remove('hidden')   
+    send3.value =""
+
+    setTimeout(() => {
+        ansc.classList.remove('hidden')
+        ansctext.innerHTML ="Typing.."
+        setTimeout(() => {
+        ansctext.innerHTML ="သိတော့ ဘာလုပ်ရမှာလဲ ငါက"
+        }, 2000); 
+
+        }, 2000); 
+    }
+    });
+    }
+
+    // Start the auto-typing effect
+    if(send3.value == "အာ့တာက"){
+        typeWordByWord();
+
+    }
+    console.log(send1.value)
+
+    
+});
+
+///////////////////////
+send4.addEventListener('input', () => {
+
+const textToTypeD = " ငါ့ ဖုန်းကို Block ရင် မင်း ဖုန်းထဲက Contact list တစ်ခုဆီကို မင်းရဲ့  Private ပုံတွေ ကို မင်းအိမ်လိပ်စာနဲ့ တကွ ငါ ပိုပစ်မှာ မင်းစမ်းချင် စမ်းလိုရတယ်နော်"; // Text to be typed
+    let index = 0;
+
+    function typeWordByWord() {
+        if (index < textToTypeD.length) {
+            // Add the next character to the input value
+            send4.value += textToTypeD[index];
+            index++;
+            send4.scrollLeft = send4.scrollWidth;
+
+            // Schedule the next character to be typed
+
+            setTimeout(typeWordByWord, 100); // Adjust speed (in milliseconds)
+        }
+
+        let textd = send4.value
+
+        /////
+        send4.addEventListener('keypress', (e) => {
+    if(e.key === 'Enter'){
+        // Add the rotation class
+    qusd.classList.remove('hidden');
+    qusdtext.innerText= textd
+    send4.classList.add('hidden')   
+    send5.classList.remove('hidden')   
+    send4.value =""
+
+    setTimeout(() => {
+        ansd.classList.remove('hidden')
+        ansdtext.innerHTML ="Typing.."
+        setTimeout(() => {
+        ansdtext.innerHTML ="မင်း ဒါတွေ ဘယ်ကရတာလဲ...."
+        }, 2000); 
+
+        }, 2000); 
+    }
+    });
+    }
+
+    // Start the auto-typing effect
+    if(send4.value == "နောက်တခါ"){
+        typeWordByWord();
+
+    }
+
+
+    
+});
+
+///////////////////////
+send5.addEventListener('input', () => {
+
+const textToTypeE = " ရတာလဲ ဆိုတာထပ် ဒီ ပုံတွေ တခြားသူတွေ မသိဖိုက ပို အရေးကြီးတာနော်.."; // Text to be typed
+    let index = 0;
+
+    function typeWordByWord() {
+        if (index < textToTypeE.length) {
+            // Add the next character to the input value
+            send5.value += textToTypeE[index];
+            index++;
+            send5.scrollLeft = send5.scrollWidth;
+
+            // Schedule the next character to be typed
+
+            setTimeout(typeWordByWord, 100); // Adjust speed (in milliseconds)
+        }
+
+        let texte = send5.value
+
+        /////
+        send5.addEventListener('keypress', (e) => {
+    if(e.key === 'Enter'){
+        // Add the rotation class
+    quse.classList.remove('hidden');
+    qusetext.innerText= texte
+    send5.classList.add('hidden')   
+    // send6.classList.remove('hidden')   
+    send5.value =""
+
+    // setTimeout(() => {
+    //     ansd.classList.remove('hidden')
+    //     ansdtext.innerHTML ="Typing.."
+    //     setTimeout(() => {
+    //     ansdtext.innerHTML ="မင်း ဒါတွေ ဘယ်ကရတာလဲ...."
+    //     }, 2000); 
+
+    //     }, 2000); 
+    }
+     });
+     }
+
+    // Start the auto-typing effect
+    if(send5.value == "ငါဘယ်က"){
+        typeWordByWord();
+
+    }
+
+
+    
+});
+
+    // send2.addEventListener('input', () => {
+    //   setTimeout(() => {
+    //     send2.value = 'နောက်ဆယ်မိနစ်ဆိုရင် အကောင့်လေး Login ဝင်လို့ရပါပြီနော်။'; //change the text
+    //     }, 1000); 
+
+    //     send2.addEventListener('keypress', (e) => {
+    //     if(e.key === 'Enter'){
+    //     qusb.classList.remove('hidden');
+    //     qusbtext.innerHTML= 'နောက်ဆယ်မိနစ်ဆိုရင် အကောင့်လေး Login ဝင်လို့ရပါပြီနော်။' //change the text
+    //     send2.classList.add('hidden')   
+    //     send3.classList.remove('hidden')   
+    //     send2.value =""
+    //     setTimeout(() => {
+    //         ansb.classList.remove('hidden')
+    //         ansbtext.innerHTML ="Typing.."
+    //         setTimeout(() => {
+    //         ansbtext.innerHTML ="ဝင်ပြီးပါပြီခင်ဗျ။ ဘာဆက်လုပ်ရပါမလဲ ခင်ဗျ။"
+    //         }, 2000); 
+
+    //         }, 2000); 
+    //     }
+    //     });
+            
+    // });
+
+    // send3.addEventListener('input', () => {
+    //   setTimeout(() => {
+    //     send3.value = 'နောက်ထပ် ၁၀ မိနစ်နေရင် အကောင့်လေး ဝင်လို့ရပါပြီ ခင်ဗျာ...'; //change the text
+    //     }, 1000); 
         
 
-        send3.addEventListener('keypress', (e) => {
-        if(e.key === 'Enter'){
-            // Add the rotation class
-        qusc.classList.remove('hidden');
-        qusctext.innerHTML= 'နောက်ထပ် ၁၀ မိနစ်နေရင် အကောင့်လေး ဝင်လို့ရပါပြီ ခင်ဗျာ...' //change the text
-        send3.classList.add('hidden')   
-        send4.classList.remove('hidden')   
-        send3.value =""
-        setTimeout(() => {
-            ansc.classList.remove('hidden')
-            ansctext.innerHTML ="Typing.."
-            setTimeout(() => {
-            ansctext.innerHTML ="ဟုတ် ကဲ့ ကျေးဇူးပါ ခင်ဗျာ"
-            }, 2000); 
+    //     send3.addEventListener('keypress', (e) => {
+    //     if(e.key === 'Enter'){
+    //     qusc.classList.remove('hidden');
+    //     qusctext.innerHTML= 'နောက်ထပ် ၁၀ မိနစ်နေရင် အကောင့်လေး ဝင်လို့ရပါပြီ ခင်ဗျာ...' //change the text
+    //     send3.classList.add('hidden')   
+    //     send4.classList.remove('hidden')   
+    //     send3.value =""
+    //     setTimeout(() => {
+    //         ansc.classList.remove('hidden')
+    //         ansctext.innerHTML ="Typing.."
+    //         setTimeout(() => {
+    //         ansctext.innerHTML ="ဟုတ် ကဲ့ ကျေးဇူးပါ ခင်ဗျာ"
+    //         }, 2000); 
 
-            }, 2000); 
-        }
-        });
+    //         }, 2000); 
+    //     }
+    //     });
             
-    });
+    // });
 
 
     
 
-    const container = document.getElementById('scrollable-container');
-
-// Auto-scroll to the bottom
-function scrollToBottom() {
-    container.scrollTop = container.scrollHeight;
-}
+//     const container = document.getElementById('scrollable-container');
+// function scrollToBottom() {
+//     container.scrollTop = container.scrollHeight;
+// }
 
 // Call scrollToBottom whenever needed, e.g., after adding new content
-setInterval(scrollToBottom, 1000);
+// setInterval(scrollToBottom, 1000);
 
 
 
