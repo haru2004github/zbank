@@ -6,23 +6,31 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* HTML: <div class="loader"></div> */
-/* HTML: <div class="loader"></div> */
+       /* HTML: <div class="loader"></div> */
 .loader {
-  width: 60px;
-  height: 50px;
-  --m:no-repeat linear-gradient(90deg,#000 70%,#0000 0);
-  -webkit-mask: 
-    var(--m) calc(0*100%/4) 100%/calc(100%/5) calc(1*100%/5),
-    var(--m) calc(1*100%/4) 100%/calc(100%/5) calc(2*100%/5),
-    var(--m) calc(2*100%/4) 100%/calc(100%/5) calc(3*100%/5),
-    var(--m) calc(3*100%/4) 100%/calc(100%/5) calc(4*100%/5),
-    var(--m) calc(4*100%/4) 100%/calc(100%/5) calc(5*100%/5);
-  background: linear-gradient(#ffffff 0 0) left/0% 100% no-repeat #199212;
-  animation: l14 2s infinite steps(6);
+  width: 20px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #27a015;
+  box-shadow: 0 0 0 0 rgba(32, 169, 45, 0.267);
+  animation: l2 1.5s infinite linear;
+  position: relative;
 }
-@keyframes l14 {
-  100% {background-size: 120% 100%}
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: 0 0 0 0 rgba(24, 168, 58, 0.267);
+  animation: inherit;
+  animation-delay: -0.5s;
+}
+.loader:after {
+  animation-delay: -1s;
+}
+@keyframes l2 {
+    100% {box-shadow: 0 0 0 40px #0000}
 }
 
 
@@ -58,7 +66,6 @@
             </div>
 
             <div class="bg-green-500 p-5 rounded-xl shadow-xl backdrop-blur-lg mt-5  border-2 border-green-500 ml-10 py-10">
-                <div class="loader mx-auto w-32 h-20"></div>
                 <div class="mt-8 flex justify-center gap-x-3">
                     <button class="bg-green-800/50 ring-green-700 shadow-md border border-green-600 backdrop-blur-lg text-white p-2 text-lg rounded-lg">
                         Trace the Loaction
@@ -76,8 +83,13 @@
 
            
         </div>
-        <div class="bg-green-500 w-20 h-20 rounded-full animate-ping fixed top-40 right-96 z-50 "></div>
-        <div class="bg-green-500 w-20 h-20 rounded-full animate-ping fixed top-[50%] right-[60%] z-50 "></div>
+
+        <div class="loader bg-green-500 w-20 h-20 rounded-full scale-[1.3]  fixed top-40 right-96 z-50"></div>
+
+        <div class="loader bg-green-500 w-20 h-20 rounded-full fixed top-[50%] right-[60%] z-50 scale-[1.3] opacity-90"></div>
+
+
+        <!-- <iframe class="bg-green-500 w-20 h-20 rounded-full fixed top-[50%] right-[60%] z-50 " src="https://lottie.host/embed/85509ae9-4788-4f4c-a632-e0aa1f9893fb/02q7hW4W7g.lottie"></iframe> -->
 
         <iframe class="h-screen dark:bg-slate-900" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7078.1297471905655!2d96.18337398456897!3d16.827443875554607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1935c6f266149%3A0x10c69d434ea0878!2sHtoo%20Htoo%20Auto%20Service!5e0!3m2!1sen!2smm!4v1737609198852!5m2!1sen!2smm" width="100%" height="1000" style="border:0;background-color: #202020;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
