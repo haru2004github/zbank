@@ -248,62 +248,64 @@
             </article>
 
             <article class="grid grid-cols-10 gap-x-7 mt-14">
-                <div class="col-span-5  flex justify-center items-start  p-5 border border-slate-300 rounded-xl shadow-lg ">
-                    <div class="w-72 h-72">
+                <div class="col-span-5  flex justify-center items-start  p-5 ">
+                    <div class="w-96 h-96">
                         <canvas id="donut-chart"></canvas>
                     </div>
-                    <div class="p-5 ml-6">
-                        <div class="flex items-center gap-x-2">
-                            <div class="w-4 h-4 bg-[#EF4444] rounded-full"></div>
-                            <span class="text-lg">
-                            Income
-
-                            </span>
-                        </div>
-
-                        <div class="flex items-center gap-x-2">
-                            <div class="w-4 h-4 bg-[#3B82F6] rounded-full"></div>
-                            <span class="text-lg">
-                                Investment
-
-                            </span>
-                        </div>
-
-                        <div class="flex items-center gap-x-2">
-                            <div class="w-4 h-4 bg-[#FBBF24] rounded-full"></div>
-                            <span class="text-lg">
-                                Transfer
-                            </span>
-                        </div>
-
-
-                        <div class="flex items-center gap-x-2">
-                            <div class="w-4 h-4 bg-[#10B981] rounded-full"></div>
-                            <span class="text-lg">
-                                Recipt
-                            </span>
-                        </div>
-
-                        <div class="flex items-center gap-x-2">
-                            <div class="w-4 h-4 bg-[#A78BFA] rounded-full"></div>
-                            <span class="text-lg">
-                                Loan Accounts
-                            </span>
-                        </div>
-
-                        <div class="flex items-center gap-x-2">
-                            <div class="w-4 h-4 bg-[#F59E0B] rounded-full"></div>
-                            <span class="text-lg">
-                                Saving
-                            </span>
+                    <div class="p-5 ml-8 scale-[1.3] flex flex-col items-center justify-center mt-10">
+                        <div class="">
+                            <div class="flex items-center gap-x-2">
+                                <div class="w-4 h-4 bg-[#EF4444] rounded-full"></div>
+                                <span class="text-lg">
+                                Income
+    
+                                </span>
+                            </div>
+    
+                            <div class="flex items-center gap-x-2">
+                                <div class="w-4 h-4 bg-[#3B82F6] rounded-full"></div>
+                                <span class="text-lg">
+                                    Investment
+    
+                                </span>
+                            </div>
+    
+                            <div class="flex items-center gap-x-2">
+                                <div class="w-4 h-4 bg-[#FBBF24] rounded-full"></div>
+                                <span class="text-lg">
+                                    Transfer
+                                </span>
+                            </div>
+    
+                            <div class="flex items-center gap-x-2">
+                                <div class="w-4 h-4 bg-[#10B981] rounded-full"></div>
+                                <span class="text-lg">
+                                    Recipt
+                                </span>
+                            </div>
+    
+                            <div class="flex items-center gap-x-2">
+                                <div class="w-4 h-4 bg-[#A78BFA] rounded-full"></div>
+                                <span class="text-lg">
+                                    Loan Accounts
+                                </span>
+                            </div>
+    
+                            <div class="flex items-center gap-x-2">
+                                <div class="w-4 h-4 bg-[#F59E0B] rounded-full"></div>
+                                <span class="text-lg">
+                                    Saving
+                                </span>
+                            </div>
                         </div>
                     </div>
+                    
                 </div>
                 <div class="col-span-5 bg-white rounded-xl shadow-lg  border border-slate-300 ">
                     <h3 class="text-2xl font-semibold p-5 pb-5">
                         ငွေအဝင်/အထွက်မှတ်တမ်း
                     </h3>
-                    <div class="flex flex-col gap-y-3 overflow-y-scroll  p-5 pb-0">
+                    <div class="flex flex-col gap-y-3 overflow-y-scroll  p-5">
                         <div id="current" class="hidden bg-slate-50 gap-x-5 p-2 shadow-md border border-slate-300 rounded-lg">
                             <div class="flex items-center gap-x-5">
                                 <div class="">
@@ -428,64 +430,10 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="bg-slate-50 gap-x-5 p-2 shadow-md border border-slate-300 rounded-lg">
-                            <div class="flex items-center gap-x-5">
-                                <div class="">
-                                    <div class="flex justify-center items-center w-12 h-12 rounded-full bg-blue-500 text-white ">
-                                        <i class="fas fa-sack-dollar text-xl"></i>
-                                    </div>
-                                </div>
-    
-                                <div class="flex justify-between w-full">
-                                    <div class="">
-                                        <h2>ပေးပို့သူ</h2>
-                                        <h2 class="text-lg">စိုင်းညီ</h2>
-                                    </div>
-                                    <div class="">
-                                        <h1 class="text-slate-800 text-2xl font-semibold">
-                                            +2,400,000
-                                        </h1>
-                                        <h4 class="text-end text-slate-700 text-sm">
-                                            လွန်ခဲ့သောတစ်ရက်
-                                        </h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="bg-slate-50 gap-x-5 p-2 shadow-md border border-slate-300 rounded-lg">
-                            <div class="flex items-center gap-x-5">
-                                <div class="">
-                                    <div class="flex justify-center items-center w-12 h-12 rounded-full bg-blue-500 text-white ">
-                                        <i class="fas fa-sack-dollar text-xl"></i>
-                                    </div>
-                                </div>
-    
-                                <div class="flex justify-between w-full">
-                                    <div class="">
-                                        <h2>ပေးပို့သူ</h2>
-                                        <h2 class="text-lg">ဝဏ</h2>
-                                    </div>
-                                    <div class="">
-                                        <h1 class="text-slate-800 text-2xl font-semibold">
-                                            +8,560,000
-                                        </h1>
-                                        <h4 class="text-end text-slate-700 text-sm">
-                                            လွန်ခဲ့သောတစ်ရက်
-                                        </h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>  
                     </div>
                 </div>
             </article>
          </section>
-
-
-
-         
     </main>
 
     <footer class="bg-blue-500 text-white py-2 text-center mt-5 fixed bottom-0 left-0 w-full">
