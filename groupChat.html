@@ -192,6 +192,24 @@
                     </div>
                 </div>
 
+                <div id="qusc" class="hidden">
+                    <div class="flex items-center gap-x-2 justify-end">
+                        
+                        <div class="text-lg font-semibold ">
+                            Luminarc
+                        </div>
+                        <div class="w-12 h-12 overflow-hidden rounded-full shadow-lg">
+                            <img class="h-full" src="https://static.vecteezy.com/system/resources/thumbnails/000/439/863/small/Basic_Ui__28186_29.jpg" alt="">
+
+                        </div>
+                    </div>
+                    <div class="flex justify-end">
+                        <a  id="qusctext" href="" class=" bg-white text-blue-500 underline  p-2  rounded-2xl rounded-tr-none shadow-lg border border-slate-300  mr-12 w-auto inline-block text-end">
+                            https://www.facebook.com/share/p/15zBiWUV2z/
+                        </a>
+                    </div>
+                </div>
+
                 <div id="ansf" class="mt-3 hidden ">
                     <div class="flex items-center gap-x-2">
                         
@@ -209,7 +227,8 @@
 
             </div>
         </div>
-       
+
+
 
         <div class=" p-5  shadow-lg bg-[#fafafa]  border-t border-slate-300 ">
             <div class="flex items-center gap-x-3">
@@ -316,6 +335,9 @@
     const anse = document.getElementById('anse');
     const ansf = document.getElementById('ansf');
     const qusb = document.getElementById('qusb');
+    const qusc = document.getElementById('qusc');
+    const qusctext = document.getElementById('qusctext');
+    
 
 
     send1.addEventListener('input', () => {
@@ -409,7 +431,7 @@ const textToTypeA = "လို... ရှိကြလား ဘော်ဒါတ
 
 send2.addEventListener('input', () => {
 
-const textToTypeB = "တာဆို ဒီလင့်မှာ တင်ထားတဲ့ သတင်းကို ပြန့်အောင် ဖြန့်ဖိုရှိတယ်"; // Text to be typed
+const textToTypeB = "တာဆို ဒီလင့်မှာ တင်ထားတဲ့ သတင်းကို ပြန့်အောင် ဖြန့်ဖိုရှိတယ် "; // Text to be typed
     let index = 0;
 
     function typeWordByWord() {
@@ -421,6 +443,7 @@ const textToTypeB = "တာဆို ဒီလင့်မှာ တင်ထာ
             send2.scrollLeft = send2.scrollWidth;
             // Schedule the next character to be typed
             setTimeout(typeWordByWord, 150); // Adjust speed (in milliseconds)
+            
         }
 
         let textb = send2.value
@@ -434,12 +457,17 @@ const textToTypeB = "တာဆို ဒီလင့်မှာ တင်ထာ
     send2.value =""
 
     setTimeout(() => {
+        qusc.classList.remove('hidden')
+
+        }, 1000); 
+
+        setTimeout(() => {
         ansf.classList.remove('hidden')
         ansftext.innerHTML ="Typing.."
         setTimeout(() => {
             ansftext.innerHTML ="အိုကေ..."
-            }, 1000); 
-        }, 1000); 
+            }, 2000); 
+        }, 2000);
     }
     });
     }
